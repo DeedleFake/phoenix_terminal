@@ -11,9 +11,7 @@ defmodule PhoenixTerminal.Application do
       PhoenixTerminalWeb.Telemetry,
       {DNSCluster, query: Application.get_env(:phoenix_terminal, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: PhoenixTerminal.PubSub},
-      # Start a worker by calling: PhoenixTerminal.Worker.start_link(arg)
-      # {PhoenixTerminal.Worker, arg},
-      # Start to serve requests, typically the last entry
+      PhoenixTerminal.Terminals,
       PhoenixTerminalWeb.Endpoint
     ]
 
