@@ -54,7 +54,7 @@ defmodule PhoenixTerminal.Terminals.Terminal do
         :stdin,
         stdout: state.owner,
         stderr: state.owner,
-        winsz: {24, 80}
+        winsz: {80, 80}
       ])
 
     state
